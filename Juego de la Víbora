@@ -1,3 +1,10 @@
+# Documento realizado el 18/03/2021
+# Integrantes de equipo
+# Edwin, Diego y Ruben
+# Actividad de snake
+# Link del repositorio https://github.com/RubenTec/Eq-13-actividad-2.git
+
+
 from turtle import *
 from random import randrange, choice
 from freegames import square, vector
@@ -22,7 +29,7 @@ elif b == 'green':
     c = choice(['black','blue','pink','orange'])
 else:
     c = choice(['green','black','pink','orange'])
-    
+
 # como se puede ver se realizo una cadena de ifs, para que estos colores no se repitan con el color de la serpiente, sacando de las opciones el color ya elegido para la comida.
 
 def change(x, y):
