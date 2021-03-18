@@ -1,23 +1,10 @@
 from turtle import *
-from random import randrange, choice
+from random import randrange
 from freegames import square, vector
 
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
-
-a = ['black','green','blue','pink','orange']
-b = choice(a)
-if b == 'black':
-    c = choice(['green','blue','pink','orange'])
-elif b == 'pink':
-    c = choice(['green','blue','black','orange'])
-elif b == 'orange':
-    c = choice(['green','blue','pink','black'])
-elif b == 'green':
-    c = choice(['black','blue','pink','orange'])
-else:
-    c = choice(['green','black','pink','orange'])
 
 def change(x, y):
     "Change snake direction."
@@ -50,9 +37,9 @@ def move():
     clear()
 
     for body in snake:
-        square(body.x, body.y, 9, c)
+        square(body.x, body.y, 9, 'black')
 
-    square(food.x, food.y, 9, b)
+    square(food.x, food.y, 9, 'green')
     update()
     ontimer(move, 100)
 
