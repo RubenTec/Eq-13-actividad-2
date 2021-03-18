@@ -2,6 +2,7 @@ from turtle import *
 from random import randrange, choice
 from freegames import square, vector
 
+
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
@@ -18,6 +19,7 @@ elif b == 'green':
     c = choice(['black','blue','pink','orange'])
 else:
     c = choice(['green','black','pink','orange'])
+
 
 def change(x, y):
     "Change snake direction."
@@ -56,6 +58,7 @@ def move():
     update()
     ontimer(move, 100)
 
+
 setup(420, 420, 370, 0)
 hideturtle()
 tracer(False)
@@ -66,3 +69,4 @@ onkey(lambda: change(0, 10), 'Up')
 onkey(lambda: change(0, -10), 'Down')
 move()
 done()
+
