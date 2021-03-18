@@ -7,7 +7,10 @@ food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
 
+# se creo una lista de los colores deseados después se uso choice para escoger uno de estos colores al azar
 a = ['black','green','blue','pink','orange']
+
+# la variable a se utilizó para elegir el color de la comida
 b = choice(a)
 if b == 'black':
     c = choice(['green','blue','pink','orange'])
@@ -19,6 +22,8 @@ elif b == 'green':
     c = choice(['black','blue','pink','orange'])
 else:
     c = choice(['green','black','pink','orange'])
+    
+# como se puede ver se realizo una cadena de ifs, para que estos colores no se repitan con el color de la serpiente, sacando de las opciones el color ya elegido para la comida.
 
 def change(x, y):
     "Change snake direction."
